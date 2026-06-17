@@ -2,9 +2,9 @@
   <aside class="sidebar" :class="{ collapsed, 'mobile-open': mobileOpen }">
     <div class="sidebar-brand">
       <div class="brand-icon">
-        <i class="bi bi-lightning-charge-fill"></i>
+        <i class="bi bi-activity"></i>
       </div>
-      <span class="brand-text">GestãoAcademia</span>
+      <span class="brand-text">Gestão Master</span>
     </div>
 
     <nav class="sidebar-nav">

@@ -3,10 +3,10 @@
     <div class="login-card">
       <div class="login-brand">
         <div class="brand-icon">
-          <i class="bi bi-lightning-charge-fill"></i>
+          <i class="bi bi-activity"></i>
         </div>
-        <h1>GestãoAcademia</h1>
-        <p>Faça login para acessar o sistema</p>
+        <h1>Gestão Master</h1>
+        <p>Acesse sua conta para continuar</p>
       </div>
 
       <div v-if="errorMessage" class="login-error">
