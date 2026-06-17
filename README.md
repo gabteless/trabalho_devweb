@@ -7,7 +7,7 @@
 
 Um sistema web completo para gerenciamento de academias, construído como uma Single Page Application (SPA). O projeto oferece uma interface moderna para o controle de alunos, com recursos avançados de usabilidade.
 
-> **Nota Acadêmica:** Este projeto foi desenvolvido para a disciplina de Desenvolvimento Web.
+> **Nota Acadêmica:** Este projeto foi desenvolvido como trabalho prático para a disciplina de Desenvolvimento Web, visando aplicar conceitos de SPA e gerenciamento de estado.
 
 ## 🚀 Funcionalidades
 
