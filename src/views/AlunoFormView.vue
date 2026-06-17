@@ -67,6 +67,21 @@
           </div>
 
           <div class="col-12 col-md-6">
+            <label for="plano" class="form-label-custom">Plano *</label>
+            <select
+              id="plano"
+              v-model="form.planoId"
+              class="form-select form-select-custom"
+              required
+            >
+              <option value="" disabled>Selecione um plano</option>
+              <option v-for="plano in planosStore.planos" :key="plano.id" :value="plano.id">
+                {{ plano.nome }} — {{ formatCurrency(plano.valor) }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-6">
             <label for="status" class="form-label-custom">Status *</label>
             <select
               id="status"
@@ -97,10 +112,12 @@
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAlunosStore } from '@/stores/alunos'
+import { usePlanosStore } from '@/stores/planos'
 
 const route = useRoute()
 const router = useRouter()
 const alunosStore = useAlunosStore()
+const planosStore = usePlanosStore()
 
 const saving = ref(false)
 
@@ -109,12 +126,15 @@ const form = reactive({
   cpf: '',
   telefone: '',
   email: '',
+  planoId: '',
   status: 'ativo'
 })
 
 const isEditing = computed(() => !!route.params.id)
 
 onMounted(async () => {
+  await planosStore.fetchPlanos()
+
   if (isEditing.value) {
     try {
       const aluno = await alunosStore.fetchAluno(Number(route.params.id))
@@ -140,6 +160,10 @@ function maskPhone(e) {
   v = v.replace(/^(\d{2})(\d)/g, '($1) $2')
   v = v.replace(/(\d{5})(\d)/, '$1-$2')
   form.telefone = v
+}
+
+function formatCurrency(value) {
+  return Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 }
 
 async function handleSubmit() {

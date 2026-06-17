@@ -37,6 +37,42 @@ const router = createRouter({
       name: 'aluno-editar',
       component: () => import('@/views/AlunoFormView.vue'),
       meta: { requiresAuth: true, title: 'Editar Aluno' }
+    },
+    {
+      path: '/planos',
+      name: 'planos',
+      component: () => import('@/views/PlanosView.vue'),
+      meta: { requiresAuth: true, title: 'Planos' }
+    },
+    {
+      path: '/planos/novo',
+      name: 'plano-novo',
+      component: () => import('@/views/PlanoFormView.vue'),
+      meta: { requiresAuth: true, title: 'Novo Plano' }
+    },
+    {
+      path: '/planos/:id/editar',
+      name: 'plano-editar',
+      component: () => import('@/views/PlanoFormView.vue'),
+      meta: { requiresAuth: true, title: 'Editar Plano' }
+    },
+    {
+      path: '/financeiro',
+      name: 'financeiro',
+      component: () => import('@/views/FinanceiroView.vue'),
+      meta: { requiresAuth: true, title: 'Financeiro' }
+    },
+    {
+      path: '/financeiro/novo',
+      name: 'pagamento-novo',
+      component: () => import('@/views/PagamentoFormView.vue'),
+      meta: { requiresAuth: true, title: 'Novo Pagamento' }
+    },
+    {
+      path: '/financeiro/:id/editar',
+      name: 'pagamento-editar',
+      component: () => import('@/views/PagamentoFormView.vue'),
+      meta: { requiresAuth: true, title: 'Editar Pagamento' }
     }
   ]
 })

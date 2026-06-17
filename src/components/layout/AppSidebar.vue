@@ -46,7 +46,9 @@ const route = useRoute()
 
 const menuItems = [
   { to: '/dashboard', label: 'Dashboard', icon: 'bi bi-grid-1x2-fill' },
-  { to: '/alunos', label: 'Alunos', icon: 'bi bi-people-fill' }
+  { to: '/alunos', label: 'Alunos', icon: 'bi bi-people-fill' },
+  { to: '/planos', label: 'Planos', icon: 'bi bi-bookmark-star-fill' },
+  { to: '/financeiro', label: 'Financeiro', icon: 'bi bi-wallet2' }
 ]
 
 function isActive(path) {

@@ -276,6 +276,14 @@
       "dataVencimento": "2025-12-12",
       "dataPagamento": "2025-12-12",
       "status": "pago"
+    },
+    {
+      "alunoId": 2,
+      "valor": 300,
+      "dataVencimento": "2003-06-14",
+      "dataPagamento": "1999-05-12",
+      "status": "pendente",
+      "id": "f9nDNxxjrO8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

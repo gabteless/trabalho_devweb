@@ -59,6 +59,7 @@
               <th>CPF</th>
               <th>Telefone</th>
               <th>E-mail</th>
+              <th>Plano</th>
               <th>Status</th>
               <th style="width: 90px;">Ações</th>
             </tr>
@@ -69,6 +70,7 @@
               <td>{{ aluno.cpf }}</td>
               <td>{{ aluno.telefone }}</td>
               <td>{{ aluno.email }}</td>
+              <td>{{ planosStore.getPlanoNome(aluno.planoId) }}</td>
               <td><StatusBadge :status="aluno.status" /></td>
               <td>
                 <div class="d-flex gap-1">
@@ -99,10 +101,12 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useAlunosStore } from '@/stores/alunos'
+import { usePlanosStore } from '@/stores/planos'
 import StatusBadge from '@/components/ui/StatusBadge.vue'
 import ConfirmModal from '@/components/ui/ConfirmModal.vue'
 
 const alunosStore = useAlunosStore()
+const planosStore = usePlanosStore()
 
 const searchQuery = ref('')
 const filterStatus = ref('')
@@ -110,7 +114,10 @@ const showDeleteModal = ref(false)
 const alunoToDelete = ref(null)
 
 onMounted(async () => {
-  await alunosStore.fetchAlunos()
+  await Promise.all([
+    alunosStore.fetchAlunos(),
+    planosStore.fetchPlanos()
+  ])
 })
 
 const filteredAlunos = computed(() => {
