@@ -1,0 +1,282 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Administrador",
+      "email": "admin@academia.com",
+      "senha": "123456",
+      "cargo": "Gerente"
+    },
+    {
+      "id": "2",
+      "nome": "Maria Souza",
+      "email": "maria@academia.com",
+      "senha": "123456",
+      "cargo": "Recepcionista"
+    }
+  ],
+  "alunos": [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "cpf": "123.456.789-00",
+      "telefone": "(11) 99999-0001",
+      "email": "joao.silva@email.com",
+      "planoId": 1,
+      "status": "ativo",
+      "dataCadastro": "2026-01-15"
+    },
+    {
+      "id": "2",
+      "nome": "Ana Oliveira",
+      "cpf": "234.567.890-11",
+      "telefone": "(11) 98888-0002",
+      "email": "ana.oliveira@email.com",
+      "planoId": 2,
+      "status": "ativo",
+      "dataCadastro": "2026-02-10"
+    },
+    {
+      "id": "3",
+      "nome": "Carlos Pereira",
+      "cpf": "345.678.901-22",
+      "telefone": "(21) 97777-0003",
+      "email": "carlos.pereira@email.com",
+      "planoId": 3,
+      "status": "ativo",
+      "dataCadastro": "2026-03-05"
+    },
+    {
+      "id": "4",
+      "nome": "Fernanda Costa",
+      "cpf": "456.789.012-33",
+      "telefone": "(21) 96666-0004",
+      "email": "fernanda.costa@email.com",
+      "planoId": 1,
+      "status": "inativo",
+      "dataCadastro": "2025-11-20"
+    },
+    {
+      "id": "5",
+      "nome": "Ricardo Santos",
+      "cpf": "567.890.123-44",
+      "telefone": "(31) 95555-0005",
+      "email": "ricardo.santos@email.com",
+      "planoId": 2,
+      "status": "ativo",
+      "dataCadastro": "2026-04-01"
+    },
+    {
+      "id": "6",
+      "nome": "Juliana Lima",
+      "cpf": "678.901.234-55",
+      "telefone": "(31) 94444-0006",
+      "email": "juliana.lima@email.com",
+      "planoId": 4,
+      "status": "ativo",
+      "dataCadastro": "2026-05-12"
+    },
+    {
+      "id": "7",
+      "nome": "Bruno Almeida",
+      "cpf": "789.012.345-66",
+      "telefone": "(11) 93333-0007",
+      "email": "bruno.almeida@email.com",
+      "planoId": 3,
+      "status": "ativo",
+      "dataCadastro": "2026-01-28"
+    },
+    {
+      "id": "8",
+      "nome": "Patrícia Ferreira",
+      "cpf": "890.123.456-77",
+      "telefone": "(21) 92222-0008",
+      "email": "patricia.ferreira@email.com",
+      "planoId": 1,
+      "status": "inativo",
+      "dataCadastro": "2025-09-10"
+    },
+    {
+      "id": "9",
+      "nome": "Lucas Rodrigues",
+      "cpf": "901.234.567-88",
+      "telefone": "(11) 91111-0009",
+      "email": "lucas.rodrigues@email.com",
+      "planoId": 5,
+      "status": "ativo",
+      "dataCadastro": "2026-06-01"
+    },
+    {
+      "id": "10",
+      "nome": "Camila Martins",
+      "cpf": "012.345.678-99",
+      "telefone": "(31) 90000-0010",
+      "email": "camila.martins@email.com",
+      "planoId": 2,
+      "status": "ativo",
+      "dataCadastro": "2026-05-25"
+    },
+    {
+      "nome": "Henrique Milhorim",
+      "cpf": "123.214.345-14",
+      "telefone": "(23) 21321-3213",
+      "email": "email@email.com",
+      "planoId": "5",
+      "status": "ativo",
+      "dataCadastro": "2026-06-16",
+      "id": "cPamnA7zcnY"
+    }
+  ],
+  "planos": [
+    {
+      "id": "1",
+      "nome": "Mensal Básico",
+      "valor": 89.9,
+      "duracao": 1,
+      "beneficios": "Acesso à musculação e cardio de segunda a sexta"
+    },
+    {
+      "id": "2",
+      "nome": "Mensal Completo",
+      "valor": 129.9,
+      "duracao": 1,
+      "beneficios": "Acesso completo a todas as modalidades, incluindo aulas em grupo"
+    },
+    {
+      "id": "3",
+      "nome": "Trimestral",
+      "valor": 329.7,
+      "duracao": 3,
+      "beneficios": "Acesso completo por 3 meses com 15% de desconto, inclui avaliação física"
+    },
+    {
+      "id": "4",
+      "nome": "Semestral",
+      "valor": 599.4,
+      "duracao": 6,
+      "beneficios": "Acesso completo por 6 meses com 20% de desconto, inclui avaliação física e nutricional"
+    },
+    {
+      "id": "5",
+      "nome": "Anual Premium",
+      "valor": 1078.8,
+      "duracao": 12,
+      "beneficios": "Acesso ilimitado por 12 meses com 25% de desconto, avaliação física trimestral, acompanhamento nutricional e acesso ao app exclusivo"
+    }
+  ],
+  "pagamentos": [
+    {
+      "alunoId": 1,
+      "valor": 89.9,
+      "dataVencimento": "2026-06-15",
+      "dataPagamento": "2026-06-14",
+      "status": "atrasado",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "alunoId": 2,
+      "valor": 129.9,
+      "dataVencimento": "2026-06-10",
+      "dataPagamento": "2026-06-10",
+      "status": "pago"
+    },
+    {
+      "alunoId": 3,
+      "valor": 329.7,
+      "dataVencimento": "2026-07-05",
+      "dataPagamento": null,
+      "status": "pago",
+      "id": "3"
+    },
+    {
+      "alunoId": 4,
+      "valor": 89.9,
+      "dataVencimento": "2026-05-20",
+      "dataPagamento": "2026-05-19",
+      "status": "pago",
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "alunoId": 5,
+      "valor": 129.9,
+      "dataVencimento": "2026-06-01",
+      "dataPagamento": "2026-05-30",
+      "status": "pago"
+    },
+    {
+      "id": "6",
+      "alunoId": 6,
+      "valor": 599.4,
+      "dataVencimento": "2026-06-12",
+      "dataPagamento": "2026-06-12",
+      "status": "pago"
+    },
+    {
+      "id": "7",
+      "alunoId": 7,
+      "valor": 329.7,
+      "dataVencimento": "2026-06-28",
+      "dataPagamento": null,
+      "status": "pendente"
+    },
+    {
+      "id": "9",
+      "alunoId": 9,
+      "valor": 1078.8,
+      "dataVencimento": "2026-06-01",
+      "dataPagamento": "2026-06-01",
+      "status": "pago"
+    },
+    {
+      "id": "10",
+      "alunoId": 10,
+      "valor": 129.9,
+      "dataVencimento": "2026-06-25",
+      "dataPagamento": null,
+      "status": "pendente"
+    },
+    {
+      "id": "11",
+      "alunoId": 1,
+      "valor": 89.9,
+      "dataVencimento": "2026-05-15",
+      "dataPagamento": "2026-05-14",
+      "status": "pago"
+    },
+    {
+      "id": "12",
+      "alunoId": 2,
+      "valor": 129.9,
+      "dataVencimento": "2026-05-10",
+      "dataPagamento": "2026-05-09",
+      "status": "pago"
+    },
+    {
+      "id": "13",
+      "alunoId": 5,
+      "valor": 129.9,
+      "dataVencimento": "2026-05-01",
+      "dataPagamento": "2026-04-30",
+      "status": "pago"
+    },
+    {
+      "id": "14",
+      "alunoId": 3,
+      "valor": 329.7,
+      "dataVencimento": "2026-04-05",
+      "dataPagamento": "2026-04-05",
+      "status": "pago"
+    },
+    {
+      "id": "15",
+      "alunoId": 6,
+      "valor": 599.4,
+      "dataVencimento": "2025-12-12",
+      "dataPagamento": "2025-12-12",
+      "status": "pago"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
